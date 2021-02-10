@@ -6,10 +6,13 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import DimasPicture from "../../images/Dimas.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
   },
   grow: {
     flexGrow: 4,
@@ -40,7 +43,11 @@ const useStyles = makeStyles((theme) => ({
      },
   },
   nameBold: {
-      fontWeight: "bold"
+    fontWeight: "bold"
+  },
+  jumboimg: {
+    width: "300px",
+    height: "420px"
   }
 }));
 
@@ -48,9 +55,10 @@ function Navbar() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Typography color="textSecondary">Hello I'm</Typography>
-      <Typography className={classes.nameBold}>Gregorius Dimas Baskara</Typography>
-      <Typography>Web Developer</Typography>
+      <div>
+      <Typography variant="h6" color="textSecondary">Hello I'm</Typography>
+      <Typography variant="h6" className={classes.nameBold}>Gregorius Dimas Baskara</Typography>
+      <Typography variant="h6">Web Developer</Typography>
       <div>
         <IconButton edge="start" className={classes.socialButton} aria-label="menu">
             <LinkedInIcon />
@@ -69,11 +77,17 @@ function Navbar() {
         </IconButton>
       </div>
       <Button>
+        <Typography variant="h6">
           Contact Me
+        </Typography>
       </Button>
       <Button>
+        <Typography variant="h6">
           See My Resume
+        </Typography>
       </Button>
+      </div>
+      <img src={DimasPicture} className={classes.jumboimg}/>
     </div>
   );
 }

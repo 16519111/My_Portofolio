@@ -37,7 +37,10 @@ const useStyles = makeStyles((theme) => ({
   myPortofolio: {
     marginLeft: theme.spacing(3),
     fontWeight: "bold",
-    color: "black"
+    color: "black",
+  },
+  link: {
+    textDecoration: "none"
   }
 }));
 
@@ -47,14 +50,18 @@ function Navbar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.navbarColor} elevation={0}>
         <Toolbar className={classes.navbarFlex}>
-          <Typography variant="subtitle1" className={classes.myPortofolio}>
-             MY PORTOFOLIO
-          </Typography>
+          <a href="/home" className={classes.link}>
+            <Typography variant="subtitle1" className={classes.myPortofolio}>
+              MY PORTOFOLIO
+            </Typography>
+          </a>
           <div className={classes.grow}/>
           <Button className={classes.navbarTitle}>
-            <Typography variant="subtitle1" className={classes.navbarTitleText}>
-                PROFILE
-            </Typography>
+            <a href="/profile" className={classes.link}>
+              <Typography variant="subtitle1" className={classes.navbarTitleText}>
+                  PROFILE
+              </Typography>
+            </a>
           </Button>
           <Button className={classes.navbarTitle}>
             <Typography variant="subtitle1" className={classes.navbarTitleText}>
