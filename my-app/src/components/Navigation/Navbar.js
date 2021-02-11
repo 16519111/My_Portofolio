@@ -56,28 +56,34 @@ function Navbar() {
             </Typography>
           </a>
           <div className={classes.grow}/>
-          <Button className={classes.navbarTitle}>
-            <a href="/profile" className={classes.link}>
+          <a href="/profile" className={classes.link}>
+            <Button className={classes.navbarTitle}>
+                <Typography variant="subtitle1" className={classes.navbarTitleText}>
+                    PROFILE
+                </Typography>
+            </Button>
+          </a>
+          <a href="/skills" className={classes.link}>
+            <Button className={classes.navbarTitle}>
+                <Typography variant="subtitle1" className={classes.navbarTitleText}>
+                    SKILLS
+                </Typography>
+            </Button>
+          </a>
+          <a href="/projects" className={classes.link}>
+            <Button className={classes.navbarTitle}>
               <Typography variant="subtitle1" className={classes.navbarTitleText}>
-                  PROFILE
+                  PROJECTS
               </Typography>
-            </a>
-          </Button>
-          <Button className={classes.navbarTitle}>
-            <Typography variant="subtitle1" className={classes.navbarTitleText}>
-                SKILLS
-            </Typography>
-          </Button>
-          <Button className={classes.navbarTitle}>
-            <Typography variant="subtitle1" className={classes.navbarTitleText}>
-                PROJECTS
-            </Typography>
-          </Button>
-          <Button className={classes.navbarTitle}>
-            <Typography variant="subtitle1" className={classes.navbarTitleText}>
-                EXPERIENCE
-            </Typography>
-          </Button>
+            </Button>
+          </a>
+          <a href="/experiences" className={classes.link}>
+            <Button className={classes.navbarTitle}>
+              <Typography variant="subtitle1" className={classes.navbarTitleText}>
+                  EXPERIENCE
+              </Typography>
+            </Button>
+          </a>
           <IconButton edge="start" className={classes.menuButton} aria-label="menu">
             <MenuIcon />
           </IconButton>

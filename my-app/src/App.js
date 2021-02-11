@@ -9,9 +9,11 @@ function App() {
   return (
     <Router>         
       <Navbar/>
-      <Container>
-        <Section/>
-      </Container>
+      <div style={{marginBottom: "5%"}}>
+        <Container>
+          <Section/>
+        </Container>
+      </div>
     </Router>
   );
 }
