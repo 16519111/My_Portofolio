@@ -85,8 +85,7 @@ function Skills() {
                         React.Js
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        One of the most popular open source JavaScript library for frontend development. Skills : React Hooks, React Context, React Redux, and many more
                     </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -109,8 +108,7 @@ function Skills() {
                         Next.Js
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        A open source React Framework which enables server side rendering and generating static Websites. Skills : Next Link, Next Image, Next Head, and many more
                     </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -133,8 +131,7 @@ function Skills() {
                         Material UI
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        Material UI provides React components for faster and easier web development. Skills : Accordion, Tabs, Steppers, Grid, Paper, Paper, Typography, and many more
                     </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -157,8 +154,7 @@ function Skills() {
                         Bootstrap
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        A free and open-source CSS framework directed at responsive, mobile-first front-end web development. Skills : Accordion, Navbar, Pagination, and many more
                     </Typography>
                     </CardContent>
                 </CardActionArea>

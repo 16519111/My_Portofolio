@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Accordion, AccordionDetails, AccordionSummary, Typography, Divider, Avatar, Grid, Paper, Button } from '@material-ui/core'
+import { Accordion, AccordionDetails, AccordionSummary, Typography, Divider, Avatar, Grid, Paper, Button, IconButton } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import SXCPicture from "../../images/SXC.png";
 import JLogoPicture from "../../images/Logo.ico";
@@ -8,6 +8,10 @@ import GamePicture from "../../images/Game.png";
 import ArkavidiaPicture from "../../images/Arkavidia.png";
 import ReactPicture from "../../images/React.png";
 import PythonPicture from "../../images/Python.png";
+import LaptopMacIcon from '@material-ui/icons/LaptopMac';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import DataUsageIcon from '@material-ui/icons/DataUsage';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -50,9 +54,21 @@ function Projects() {
             {(topic === 1) ? "Websites" : (topic === 2) ? "Mobile Apps" : "Data Science"}
         </Typography>
         <div style={{display: "flex", justifyContent: "flex-end", marginLeft: "10%", marginRight: "10%", marginTop: "2%"}}>
-            <Button onClick={() => handleChangeTopic(1)}>Websites</Button>
-            <Button onClick={() => handleChangeTopic(2)}>Mobile Apps</Button>
-            <Button onClick={() => handleChangeTopic(3)}>Data Science</Button>
+            <Tooltip title="Websites">
+                <IconButton aria-label="delete" onClick={() => handleChangeTopic(1)}>
+                    <LaptopMacIcon />
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="Mobile Apps">
+                <IconButton aria-label="delete" onClick={() => handleChangeTopic(2)}>
+                    <PhoneAndroidIcon />
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="Data Science">
+                <IconButton aria-label="delete" onClick={() => handleChangeTopic(3)}>
+                    <DataUsageIcon />
+                </IconButton>
+            </Tooltip>
         </div>
         <Divider style={{marginTop: "0%", marginLeft: "10%", marginRight: "10%", marginBottom: "2%"}}/>
         {(topic === 1) ?
@@ -67,7 +83,7 @@ function Projects() {
                                 </Grid>
                                 <Grid item style={{}} xs={10}>
                                     <Typography variant="h6" style={{fontWeight: "bold"}} gutterBottom>StudentxCEOs 10th Grand Summit</Typography>
-                                    <Typography variant="body2">The biggest annual event held by StudentsxCEOs Bandung Chapter, a platform for students across Indonesia to collaborate and solve real prominent business cases, problems related to Sustainable Development Goals (SDGs), and the chance to learn and engage with renowned speakers from their respected fields through a series of grand talkshows.</Typography>
+                                    <Typography variant="body2">A Website made with React.js Library and Next.js Framework. Consists of 6 pages : 1 Landing Page, 1 About Page, and 4 Event Pages. Built with a Navbar, a Footer, and overall responsive components. Available in dual language mode : Bahasa Indonesia and English (Made with React Context). Connected to a google Calendar and google Spreadsheet API</Typography>
                                 </Grid>
                             </Grid>
                         </Paper>
