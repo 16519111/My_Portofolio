@@ -1,7 +1,7 @@
 import React from 'react';
 import ProfilePicture from "../../images/DimasProfile.jpg";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import { Avatar, Button, Typography, Paper, Hidden, Divider } from "@material-ui/core";
+import { Avatar, Button, Typography, Paper, Hidden, Divider, Grid } from "@material-ui/core";
 import Carousel from 'react-material-ui-carousel'
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -19,6 +19,9 @@ import PublishIcon from '@material-ui/icons/Publish';
 import SearchIcon from '@material-ui/icons/Search';
 import FindInPageIcon from '@material-ui/icons/FindInPage';
 import TableChartIcon from '@material-ui/icons/TableChart';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 const ColorlibConnector = withStyles({
     alternativeLabel: {
@@ -207,6 +210,7 @@ function getStepContent(step) {
             <div>
                 <Typography variant="h5" align="center" style={{marginTop: "2%", marginBottom: "1%"}}>Junior High School</Typography>
                 <Typography align="center" gutterBottom><b>Canisius College</b></Typography>
+                <Typography align="center"  color="textPrimary" variant="body2">Third Rank In Class (1), Second Rank In Class (3)</Typography>
                 <Typography align="center" color="textSecondary" variant="body2">National Exam : 96.75 / 100</Typography>
             </div>
         )
@@ -216,6 +220,7 @@ function getStepContent(step) {
                 <Typography variant="h5" align="center" style={{marginTop: "2%", marginBottom: "1%"}}>Senior High School</Typography>
                 <Typography align="center"><b>Canisius College</b></Typography>
                 <Typography align="center" gutterBottom color="textPrimary">Science Program</Typography>
+                <Typography align="center"  color="textPrimary" variant="body2">Cumlaude (1), Magna Cumlaude (2), Summa Cumlaude (3)</Typography>
                 <Typography align="center" color="textSecondary" variant="body2">National Exam : 97.5 / 100</Typography>
             </div>
         )
@@ -352,6 +357,44 @@ function Profile() {
                   {items.map( (item, i) => <Item key={i} item={item} /> )}
               </Carousel>
             </div>
+            <Divider style={{marginTop: "4%", marginLeft: "10%", marginRight: "10%"}}/>
+            <Typography variant="h4" style={{marginTop: "5%", textAlign: "center", marginBottom: "2%"}}>SOCIAL AND WORK LINKS</Typography>
+            <Grid container justify="center">
+              <Grid item xs={0}></Grid>
+                <Grid item container xs={12} direction="row" justify="center">
+                  <a href="https://github.com/16519111" style={{marginRight: ".8%", textDecoration: "none", color: "black"}}>
+                    <GitHubIcon/>
+                  </a>
+                  <a href="https://github.com/16519111" style={{textDecoration: "none", color: "black"}}>
+                    <Typography>16519111</Typography>
+                  </a>
+                </Grid>
+              <Grid item xs={0}></Grid>
+            </Grid>
+            <Grid container style={{marginTop: "1%"}} justify="center">
+              <Grid item xs={0}></Grid>
+              <Grid item container xs={12} direction="row" justify="center">
+                <a href="https://www.linkedin.com/in/gregorius-dimas-baskara-aba7a71aa/" style={{marginRight: ".8%", textDecoration: "none", color: "black"}}>
+                  <LinkedInIcon style={{marginRight: ".8%"}}/>
+                </a>
+                <a href="https://www.linkedin.com/in/gregorius-dimas-baskara-aba7a71aa/" style={{textDecoration: "none", color: "black"}}>
+                  <Typography>Gregorius Dimas Baskara</Typography>
+                </a>
+              </Grid>
+              <Grid item xs={0}></Grid>
+            </Grid>
+            <Grid container style={{marginTop: "1%"}} justify="center">
+              <Grid item xs={0}></Grid>
+              <Grid item container xs={12} direction="row" justify="center">
+                <a href="https://www.instagram.com/greg_dimasb/" style={{marginRight: ".8%", textDecoration: "none", color: "black"}}>
+                  <InstagramIcon style={{marginRight: ".8%"}}/>
+                </a>
+                <a href="https://www.instagram.com/greg_dimasb/" style={{textDecoration: "none", color: "black"}}>
+                  <Typography>greg_dimasb</Typography>
+                </a>
+              </Grid>
+              <Grid item xs={0}></Grid>
+            </Grid>
         </div>
     )
 }

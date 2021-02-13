@@ -116,7 +116,9 @@ function Experience() {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStepOne, setActiveStepOne] = React.useState(0);
+  const [activeStepTwo, setActiveStepTwo] = React.useState(0);
+  const [activeStepThree, setActiveStepThree] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -126,16 +128,34 @@ function Experience() {
     setValue(index);
   };
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  const handleNext = (page) => {
+    if(page === 1){
+      setActiveStepOne((prevActiveStep) => prevActiveStep + 1);
+    } else if (page === 2) {
+      setActiveStepTwo((prevActiveStep) => prevActiveStep + 1);
+    } else {
+      setActiveStepThree((prevActiveStep) => prevActiveStep + 1);
+    }
   };
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  const handleBack = (page) => {
+    if(page === 1){
+      setActiveStepOne((prevActiveStep) => prevActiveStep - 1);
+    } else if (page === 2) {
+      setActiveStepTwo((prevActiveStep) => prevActiveStep - 1);
+    } else {
+      setActiveStepThree((prevActiveStep) => prevActiveStep - 1);
+    }
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
+  const handleReset = (page) => {
+    if(page === 1){
+      setActiveStepOne(0);
+    } else if (page === 2) {
+      setActiveStepTwo(0);
+    } else {
+      setActiveStepThree(0);
+    }
   };
 
     return (
@@ -158,7 +178,7 @@ function Experience() {
       </AppBar>
 
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <Stepper activeStep={activeStep} alternativeLabel>
+          <Stepper activeStep={activeStepOne} alternativeLabel>
             {getSteps(1).map((label) => (
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
@@ -166,24 +186,24 @@ function Experience() {
             ))}
           </Stepper>
           <div style={{display: "flex", justifyContent: "center"}}>
-            {activeStep === getSteps(1).length ? (
+            {activeStepOne === getSteps(1).length ? (
               <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                 <Typography className={classes.instructions}>That's all what I've done and learned from doing internship in Schooly System</Typography>
-                <Button onClick={handleReset}>Reset</Button>
+                <Button onClick={() => handleReset(1)}>Reset</Button>
               </div>
             ) : (
               <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                <Typography className={classes.instructions}>{getStepContent(activeStep, 1)}</Typography>
+                <Typography className={classes.instructions}>{getStepContent(activeStepOne, 1)}</Typography>
                 <div>
                   <Button
-                    disabled={activeStep === 0}
-                    onClick={handleBack}
+                    disabled={activeStepOne === 0}
+                    onClick={() => handleBack(1)}
                     className={classes.backButton}
                   >
                     Back
                   </Button>
-                  <Button variant="contained" color="primary" onClick={handleNext}>
-                    {activeStep === getSteps(1).length - 1 ? 'Finish' : 'Next'}
+                  <Button variant="contained" color="primary" onClick={() => handleNext(1)}>
+                    {activeStepOne === getSteps(1).length - 1 ? 'Finish' : 'Next'}
                   </Button>
                 </div>
               </div>
@@ -191,7 +211,7 @@ function Experience() {
           </div>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <Stepper activeStep={activeStep} alternativeLabel>
+        <Stepper activeStep={activeStepTwo} alternativeLabel>
             {getSteps(2).map((label) => (
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
@@ -199,24 +219,24 @@ function Experience() {
             ))}
           </Stepper>
           <div style={{display: "flex", justifyContent: "center"}}> 
-            {activeStep === getSteps(2).length ? (
+            {activeStepTwo === getSteps(2).length ? (
               <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                 <Typography className={classes.instructions}>That's all what I've done and learned from being part of the IT Team in Arkavidia 7.0</Typography>
-                <Button onClick={handleReset}>Reset</Button>
+                <Button onClick={() => handleReset(2)}>Reset</Button>
               </div>
             ) : (
               <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                <Typography className={classes.instructions}>{getStepContent(activeStep, 2)}</Typography>
+                <Typography className={classes.instructions}>{getStepContent(activeStepTwo, 2)}</Typography>
                 <div>
                   <Button
-                    disabled={activeStep === 0}
-                    onClick={handleBack}
+                    disabled={activeStepTwo === 0}
+                    onClick={() => handleBack(2)}
                     className={classes.backButton}
                   >
                     Back
                   </Button>
-                  <Button variant="contained" color="primary" onClick={handleNext}>
-                    {activeStep === getSteps(2).length - 1 ? 'Finish' : 'Next'}
+                  <Button variant="contained" color="primary" onClick={() => handleNext(2)}>
+                    {activeStepTwo === getSteps(2).length - 1 ? 'Finish' : 'Next'}
                   </Button>
                 </div>
               </div>
@@ -224,7 +244,7 @@ function Experience() {
           </div>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-        <Stepper activeStep={activeStep} alternativeLabel>
+        <Stepper activeStep={activeStepThree} alternativeLabel>
             {getSteps(3).map((label) => (
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
@@ -232,24 +252,24 @@ function Experience() {
             ))}
           </Stepper>
           <div style={{display: "flex", justifyContent: "center"}}>
-            {activeStep === getSteps(3).length ? (
+            {activeStepThree === getSteps(3).length ? (
               <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                 <Typography className={classes.instructions}>That's all what I've done and learned from outsourcing as a Web Developer in StudentxCEOs 10th Grand Summit</Typography>
-                <Button onClick={handleReset}>Reset</Button>
+                <Button onClick={() => handleReset(3)}>Reset</Button>
               </div>
             ) : (
               <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                <Typography className={classes.instructions}>{getStepContent(activeStep, 3)}</Typography>
+                <Typography className={classes.instructions}>{getStepContent(activeStepThree, 3)}</Typography>
                 <div style={{display: "flex", justifyContent: "center"}}>
                   <Button
-                    disabled={activeStep === 0}
-                    onClick={handleBack}
+                    disabled={activeStepThree === 0}
+                    onClick={() => handleBack(3)}
                     className={classes.backButton}
                   >
                     Back
                   </Button>
-                  <Button variant="contained" color="primary" onClick={handleNext}>
-                    {activeStep === getSteps(3).length - 1 ? 'Finish' : 'Next'}
+                  <Button variant="contained" color="primary" onClick={() => handleNext(3)}>
+                    {activeStepThree === getSteps(3).length - 1 ? 'Finish' : 'Next'}
                   </Button>
                 </div>
               </div>
