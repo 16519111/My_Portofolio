@@ -50,13 +50,11 @@ function Navbar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.navbarColor} elevation={0}>
         <Toolbar className={classes.navbarFlex}>
-          <a href="/home" className={classes.link}>
-            <Typography variant="subtitle1" className={classes.myPortofolio}>
-              MY PORTOFOLIO
-            </Typography>
-          </a>
+          <Typography variant="subtitle1" className={classes.myPortofolio}>
+            MY PORTOFOLIO
+          </Typography>
           <div className={classes.grow}/>
-          <a href="/profile" className={classes.link}>
+          <a href="/" className={classes.link}>
             <Button className={classes.navbarTitle}>
                 <Typography variant="subtitle1" className={classes.navbarTitleText}>
                     PROFILE
