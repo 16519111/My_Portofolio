@@ -89,14 +89,6 @@ function Skills() {
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -112,14 +104,6 @@ function Skills() {
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -135,14 +119,6 @@ function Skills() {
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -158,14 +134,6 @@ function Skills() {
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
         </div>
         <Typography variant="h4" align="center" style={{marginTop: "6%"}}>Backend Web Development</Typography>
@@ -181,19 +149,10 @@ function Skills() {
                         MySQL
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        A domain-specific language used in programming and designed for managing data held in a relational database management system. Skills : Data Manipulation Language, Data Definition Language
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -205,19 +164,10 @@ function Skills() {
                         MariaDB
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system. Skills : Data Manipulation Language, Data Definition Language
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -229,19 +179,10 @@ function Skills() {
                         MongoDB
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -253,24 +194,15 @@ function Skills() {
                         Firebase
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        Firebase is a platform developed by Google for creating mobile and web applications. It was originally an independent company founded in 2011. Skills : Live API and Data Storage
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
         </div>
         <Typography variant="h4" align="center" style={{marginTop: "6%"}}>Mobile Apps Development</Typography>
         <Divider style={{marginTop: "2%", marginLeft: "10%", marginRight: "10%", marginBottom: "2%"}}/>
-        <div className={classes.flexRow}>
+        <div className={classes.flexRow} style={{marginLeft: "12.5%", marginRight: "12.5%"}}>
             <Card className={classes.rootCard}>
                 <CardActionArea>
                     <div className={classes.flexRowAvatar}>
@@ -281,19 +213,10 @@ function Skills() {
                         Java
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        Java is a set of computer software and specifications  that provides a system for developing application software and deploying it in a cross-platform computing environment. Skills : OOP
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -305,19 +228,10 @@ function Skills() {
                         React Native
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        React Native is an open-source mobile application framework created by Facebook, Inc. This framework supports both Javascript and Typescript extensions. Skills : React Hooks, React Context, and many more
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -329,48 +243,15 @@ function Skills() {
                         Expo
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        Expo is a framework and a platform for universal React applications. It is a set of tools a that helps to develop, build, deploy, and quickly iterate on iOS, Android, and web apps codebase.
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
-            </Card>
-            <Card className={classes.rootCard}>
-                <CardActionArea>
-                    <div className={classes.flexRowAvatar}>
-                        <Avatar alt="Remy Sharp" src={FirebasePicture} className={classes.avatar}/>
-                    </div>
-                    <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        Firebase
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-                    </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
         </div>
         <Typography variant="h4" align="center" style={{marginTop: "6%"}}>Data Science</Typography>
         <Divider style={{marginTop: "2%", marginLeft: "10%", marginRight: "10%", marginBottom: "2%"}}/>
-        <div className={classes.flexRow}>
+        <div className={classes.flexRow} style={{marginLeft: "25%", marginRight: "25%"}}>
             <Card className={classes.rootCard}>
                 <CardActionArea>
                     <div className={classes.flexRowAvatar}>
@@ -381,19 +262,10 @@ function Skills() {
                         Python
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        Python is an interpreted, high-level and general-purpose programming language. Skills : Basic Python and Sklearn (Machine Learning), Pandas, Matplotlib, Seaborn
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -405,67 +277,10 @@ function Skills() {
                         Kaggle
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        Kaggle, a subsidiary of Google LLC, is an online community of data scientists and machine learning practitioners. Skills : Kaggle Notebook and Databases
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
-            </Card>
-            <Card className={classes.rootCard}>
-                <CardActionArea>
-                    <div className={classes.flexRowAvatar}>
-                        <Avatar alt="Remy Sharp" src={MongoDBPicture} className={classes.avatar}/>
-                    </div>
-                    <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        MongoDB
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-                    </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
-            </Card>
-            <Card className={classes.rootCard}>
-                <CardActionArea>
-                    <div className={classes.flexRowAvatar}>
-                        <Avatar alt="Remy Sharp" src={FirebasePicture} className={classes.avatar}/>
-                    </div>
-                    <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        Firebase
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-                    </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
         </div>
         <Typography variant="h4" align="center" style={{marginTop: "6%"}}>Computer Science</Typography>
@@ -481,19 +296,10 @@ function Skills() {
                         C
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope with a static type system. Skills : Data Structures and Algorithm, Assembly
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -505,19 +311,10 @@ function Skills() {
                         C++
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or "C with Classes". Skills : Object Oriented Programming (OOP)
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -529,19 +326,10 @@ function Skills() {
                         Linux OS
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Skills : Linux Shell
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
             <Card className={classes.rootCard}>
                 <CardActionArea>
@@ -553,19 +341,10 @@ function Skills() {
                         Prolog
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        Prolog is a logic programming language associated with artificial intelligence and computational linguistics. Skills : Facts, Rules, Queries, Lists, Loops, General Syntaxes
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
             </Card>
         </div>
       </div>

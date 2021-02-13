@@ -2,8 +2,13 @@ import React from 'react';
 import ProfilePicture from "../../images/DimasProfile.jpg";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Avatar, Button, Typography, Paper, Hidden, Divider } from "@material-ui/core";
+import Carousel from 'react-material-ui-carousel'
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import ISOPicture from "../../images/ISO.png";
+import JazzPicture from "../../images/Jazz.png";
+import CaturPicture from "../../images/Catur.png";
+import WavePicture from "../../images/WaveProfile.svg";
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -137,6 +142,49 @@ const useStyles = makeStyles((theme) => ({
     },
     marginTop: {
         marginTop: "4%"
+    }, 
+    isoBackground: {
+      backgroundImage: `url(${ISOPicture})`,
+      objectFit: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      marginLeft: "12%",
+      marginRight: "12%",
+      height: "320px",
+      display: "flex",
+      alignItems: "flex-end",
+      padding: "20px",
+      borderRadius: "15px"
+    },
+    jazzBackground: {
+      backgroundImage: `url(${JazzPicture})`,
+      objectFit: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      marginLeft: "12%",
+      marginRight: "12%",
+      height: "320px",
+      display: "flex",
+      alignItems: "flex-end",
+      padding: "20px",
+      borderRadius: "15px"
+    },
+    caturBackground: {
+      backgroundImage: `url(${CaturPicture})`,
+      objectFit: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      marginLeft: "12%",
+      marginRight: "12%",
+      height: "320px",
+      display: "flex",
+      alignItems: "flex-end",
+      padding: "20px",
+      borderRadius: "15px"
+    },
+    orgName: {
+      color: "white",
+      fontWeight: "bold",
     }
 }));
   
@@ -150,74 +198,65 @@ function getStepContent(step) {
         return (
             <div>
                 <Typography variant="h5" align="center" style={{marginTop: "2%", marginBottom: "1%"}}>Elementary School</Typography>
-                <Typography align="center">Sang Timur Tomang</Typography>
+                <Typography align="center" gutterBottom><b>Sang Timur Tomang</b></Typography>
+                <Typography align="center" color="textSecondary" variant="body2">National Exam : 94.5 / 100</Typography>
             </div>
         )
       case 1:
         return (
             <div>
                 <Typography variant="h5" align="center" style={{marginTop: "2%", marginBottom: "1%"}}>Junior High School</Typography>
-                <Typography align="center">Canisius College</Typography>
+                <Typography align="center" gutterBottom><b>Canisius College</b></Typography>
+                <Typography align="center" color="textSecondary" variant="body2">National Exam : 96.75 / 100</Typography>
             </div>
         )
       case 2:
         return (
             <div>
                 <Typography variant="h5" align="center" style={{marginTop: "2%", marginBottom: "1%"}}>Senior High School</Typography>
-                <Typography align="center">Canisius College</Typography>
+                <Typography align="center"><b>Canisius College</b></Typography>
+                <Typography align="center" gutterBottom color="textPrimary">Science Program</Typography>
+                <Typography align="center" color="textSecondary" variant="body2">National Exam : 97.5 / 100</Typography>
             </div>
         )
       case 3:
         return (
             <div>
                 <Typography variant="h5" align="center" style={{marginTop: "2%", marginBottom: "1%"}}>University</Typography>
-                <Typography align="center">Institut Teknologi Bandung</Typography>
-            </div>
-        )
-      case 4:
-        return (
-            <div>
-                <Typography variant="h3" align="center" style={{marginTop: "2%", marginBottom: "1%"}}>Organisasi dan Arsitektur Komputer</Typography>
-                <Typography align="center">Organisasi dan Arsitektur Komputer adalah ilmu yang mempelajari bagian yang terkait erat dengan unit–unit operasional dan interkoneksi antar komponen penyusun sistem komputer dalam merealisasikan aspek arsitekturalnya. Contoh aspek organisasional adalah teknologi hardware, perangkat antarmuka, teknologi memori, dan sinyal-sinyal kontrol.</Typography>
-                <Typography variant="h6" style={{marginTop: "2%", marginBottom: "1%"}}><b>Refleksi Iman</b></Typography>
-                <Typography variant="body" style={{textAlign: "justify"}}>Di dalam mata kuliah ini, saya diajarkan bahwa komputer ataupun gadget yang saya gunakan sehari-hari yang begitu canggih itu ternyata terbagi-bagi atas beragam macam komponen, bahkan hingga ribuan. Beragam macam komponen yang berbeda-beda dan rumit itu ternyata bila disatukan maka akan menjadi suatu mesin komputer yang begitu sempurna.</Typography>
-                <Typography style={{marginTop: "2%", marginBottom: "1%", textAlign: "justify"}}>Bila direfleksikan, organisasi dan arsitektur komputer ini mengingatkan pula saya akan gereja. Di dalam gereja, saya mengenal ada susunan hierarki dari paus hingga umat awam. Saya mempelajari bahwa semua anggota gereja itu memiliki perannya masing-masing dalam mengembangkan gereja Katolik yang kokoh dari dahulu hingga sekarang. Sama seperti processor yang merupakan otak dari suatu mesin komputer, Yesus adalah pemimpin dari gerejanya seperti sabdanya pada <b>Yohanes 15:5</b> berikut ini :</Typography>
-                <Typography align="center" style={{marginTop: "2%", marginBottom: "1%", fontStyle: "italic"}}>"Akulah pokok anggur dan kamulah ranting-rantingnya. Barangsiapa tinggal di dalam Aku dan Aku di dalam dia, ia berbuah banyak, sebab di luar Aku kamu tidak dapat berbuat apa-apa." </Typography>
-                <Typography style={{marginTop: "2%", marginBottom: "1%", textAlign: "justify"}}>Meskipun hanya sebagai umat awam, layaknya komponen komputer, ternyata aku juga memiliki peran yang besar dalam mengembangkan dan memajukan gereja sebagai anggotanya. Hal ini dijelaskan dengan jelas pada <b>Korintus 12:4-8</b> :</Typography>
-                <Typography align="center" style={{marginTop: "2%", marginBottom: "1%", fontStyle: "italic"}}>"Ada rupa-rupa karunia, tetapi satu Roh. Dan ada rupa-rupa pelayanan, tetapi satu Tuhan. Dan ada berbagai-bagai perbuatan ajaib, tetapi Allah adalah satu yang mengerjakan semuanya dalam semua orang. Tetapi kepada tiap-tiap orang dikaruniakan penyataan Roh untuk kepentingan bersama. Sebab kepada yang seorang Roh memberikan karunia untuk berkata-kata dengan hikmat, dan kepada yang lain Roh yang sama memberikan karunia berkata-kata dengan pengetahuan." </Typography>
-                <Typography style={{marginTop: "2%", marginBottom: "1%", textAlign: "justify"}}>
-                Pada injil tersebut, aku merupakan salah satu 'karunia' yang ada di dalam gereja Kristus yang satu. Maka dari itu, aku harus dapat menjadi karunia Tuhan yang baik dan menjalankan peranku di dalam gereja dan di dalam masyarakat. Meskipun hanya dapat berbuat sedikit, namun perbuatan-perbuatan sedikit itulah yang akan kemudian memiliki peranan besar masing-masing dalam mempertahankan gereja.</Typography>
-            </div>
-        )
-      case 5:
-        return (
-            <div>
-                <Typography variant="h3" align="center" style={{marginTop: "2%", marginBottom: "1%"}}>Logika Komputasional</Typography>
-                <Typography align="center">Logika Komputasional adalah ilmu Computer Science yang mempelajari mengenai logika proposisi dan logika relasional. Salah satu aplikasinya adalah pada pemrograman berparadigma deklaratif.</Typography>
-                <Typography variant="h6" style={{marginTop: "2%", marginBottom: "1%"}}><b>Refleksi Iman</b></Typography>
-                <Typography style={{textAlign: "justify"}}>Pada Mata Kuliah ini, saya banyak dipusingkan dengan pertanyaan-pertanyaan yang tentang kebenaran suatu hal. Apakah pernyataan X benar? Apakah pernyataan Y salah? Bagaimana mengubah bentuk pernyataan Z sehingga bernilai benar?</Typography>
-                <Typography style={{marginTop: "2%", marginBottom: "1%", textAlign: "justify"}}>Sama seperti di dalam kehidupan sehari-hari, terkadang saya juga dihadapkan dengan persoalan-persoalan mengenai hal yang benar dan salah. Ketika menghadapi hal tersebut, kadang saya seringkali membuat rasionalisasi mengenai perbuatan saya yang sebenarnya salah. Misal ketika saya merasionalisasi bahwa menyontek ketika pembelajaran jarak jauh itu tidak apa-apa sebab toh dosennya tidak mengajarkan dengan baik. Banyak kasus-kasus seperti itu di mana aku tidak menggunakan hati nuraniku dengan baik dan hal itu mengingatkanku pada kutipan ayat berikut ini dari <b>1 Timotius 1:19</b> :</Typography>
-                <Typography align="center" style={{fontSize: "1.1rem", marginTop: "2%", marginBottom: "1%", fontStyle: "italic"}}>"Beberapa orang telah menolak hati nuraninya yang murni itu, dan karena itu kandaslah iman mereka." </Typography>
-                <Typography style={{marginTop: "2%", marginBottom: "1%", textAlign: "justify"}}>
-                Oleh karena itu, saya harus terus mengasah hati nurani (Conscience) saya secara terus-menerus. Saya harus mampu membedakan yang benar dari yang salah dan yang baik dari yang buruk. Tentu saja saya juga tidak boleh terjebak pada rasionalisasi yang tidak berdasar dan segera kembali ke jalan yang benar.</Typography>
-            </div>
-        )
-      case 6:
-        return (
-            <div>
-                <Typography variant="h3" align="center" style={{marginTop: "2%", marginBottom: "1%"}}>Teori Bahasa Formal dan Otomata</Typography>
-                <Typography align="center">Teori bahasa dan otomata merupakan bagian dari teori komputasi pada ilmu komputer. Beberapa teori komputasi datang dari bahasa dan rekayasa sistem, terutama yang berbasiskan matematika. Dalam hal ini penekanannya adalah pada pemecahan masalah. Melalui contoh-contoh ilustrasi-masalah dapat dikenali latar belakang dari suatu konsep dan hubungannya dengan definis dan teorema yang ada.</Typography>
-                <Typography variant="h6" style={{marginTop: "2%", marginBottom: "1%"}}><b>Refleksi Iman</b></Typography>
-                <Typography style={{textAlign: "justify"}}>Di Mata Kuliah ini, saya banyak belajar mengenai bahasa di dalam pemrograman. Ketika melihat suatu kode program yang kompleks dan kadang tidak jelas, yang sebenarnya kita lihat adalah bahasa pemrograman. Terdapat bahasa pemrograman C misalkan yang sering digunakan untuk membuat video Game, atau pun bahasa pemrograman python yang digunakan untuk analisis data. Dari semua kode yang diketik itu, ternyata ada satu komponen di dalam komputer yang berjasa agar instruksinya dapat dijalankan, yaitu compiler. Compiler bertugas untuk mengubah bahasa pemrograman high-level (yang dikenal manusia) menjadi bahasa mesin sehingga dapat dijalankan.</Typography>
-                <Typography style={{marginTop: "2%", marginBottom: "1%", textAlign: "justify"}}>Belajar dari sebuah compiler, maka saya dapat belajar bahwa sebagai manusia, kita harus mau mengerti lebih dari pada mau dimengerti. Kita harus mau melayani dibandingkan dilayani. Yesus sendiri pernah berpesan tentang hal ini pada <b>Matius 20:28</b> berikut ini :</Typography>
-                <Typography align="center" style={{marginTop: "2%", marginBottom: "1%", fontStyle: "italic"}}>"sama seperti Anak Manusia datang bukan untuk dilayani, melainkan untuk melayani dan untuk memberikan nyawa-Nya menjadi tebusan bagi banyak orang" </Typography>
-                <Typography style={{marginTop: "2%", marginBottom: "1%", textAlign: "justify"}}>
-                Oleh karena itu, layaknya Tuhan Yesus yang datang ke dunia untuk melayani dan bukan untuk dilayani, maka aku pun sebagai anak-Nya harus mau melayani dan bukannya dilayani, mengerti dan bukan mau dimengerti. Dengan mau untuk mengerti, mendengar, dan melayani orang lain, maka kehidupan kelak akan menjadi lancar dan tentram ketimbang apabila semuanya ingin dilayani dan didengar.</Typography>
+                <Typography align="center"><b>Institut Teknologi Bandung</b></Typography>
+                <Typography align="center" gutterBottom color="textPrimary">Informatics / Computer Science Bachelor</Typography>
+                <Typography align="center" color="textSecondary" variant="body2">Current GPA : 3.85/4</Typography>
             </div>
         )
       default:
         return 'Unknown step';
     }
+}
+
+function Item(props){
+    console.log(props)
+    let result = []
+    const classes = useStyles();
+    if(props.item.name === "ISO") {
+      result = (
+          <Paper className={classes.isoBackground}>
+              <Typography variant="h5" className={classes.orgName}>ITB Student Orchestra</Typography>
+          </Paper>
+      )
+    } else if(props.item.name === "Jazz") {
+      result = (
+        <Paper className={classes.jazzBackground}>
+            <Typography variant="h5" className={classes.orgName}>ITB Jazz</Typography>
+        </Paper>
+      )
+    } else {
+      result = (
+        <Paper className={classes.caturBackground}>
+            <Typography variant="h5" className={classes.orgName}>Percama ITB</Typography>
+        </Paper>
+      )
+    }
+    return result
 }
 
 function Profile() {
@@ -237,6 +276,18 @@ function Profile() {
     const handleReset = () => {
         setActiveStep(0);
     };
+
+    const items = [
+        {
+            name: "ISO",
+        },
+        {
+            name: "Jazz",
+        },
+        {
+            name: "Catur"
+        }
+    ]
 
     return (
         <div className={classes.rootProfile}>
@@ -268,28 +319,9 @@ function Profile() {
                 <div>
                     {activeStep === steps.length ? (
                     <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                        <h6 style={{textAlign: "center", marginBottom: "3%"}}>
-                        Begitulah Perjalanan Rohani Saya Selama Semester 3 di Program Studi Teknik Informatika ini. Segala manis dan pahit sudah dilewati dan diambil hikmahnya. Di kala pandemi ini meskipun kuliah daring dan kita seolah-olah terjebak di rumah masing-masing, kita masih tetap bisa menjadi harapan dan inspirasi bagi orang lain. Kita dapat membantu mereka yang kesulitan secara ekonomi selama pandemi ini. Kita pun juga dapat membantu tenaga medis dengan mengikuti protokol kesehatan. Meskipun sulit, namun percayalah bahwa selama masih ada iman, pengharapan, dan kasih, Tuhan masih akan selalu menyertai kita sampai akhir zaman. Akhir kata,  semoga tulisan pendek ini dapat memberikan inspirasi dan terima kasih telah membaca!
-                        </h6>
-                        <h6 style={{textAlign: "center", marginBottom: "3%", fontStyle: "italic", marginBlockEnd: 0}}>
-                        "Ad Maiorem Dei Gloriam"
-                        </h6>
-                        <h6 style={{textAlign: "center", marginBottom: "3%", marginBlockStart: 0}}>
-                        (Demi Semakin Lebih Besarnya Kemuliaan Tuhan)
-                        </h6>
-                        <h6 style={{textAlign: "center", marginBottom: "6%"}}>
-                        - Santo Ignatius Loyola -
-                        </h6>
                         <div>
                             <Button onClick={handleReset} className={classes.button}>
-                            Ulang Kembali Kisah
-                            </Button>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                className={classes.button}
-                            >
-                                <a href="/About" className={classes.link}>Tentang Saya</a>
+                            Back to Elementary
                             </Button>
                         </div>
                     </div>
@@ -312,6 +344,13 @@ function Profile() {
                     </div>
                     )}
                 </div>
+            </div>
+            <Divider style={{marginTop: "4%", marginLeft: "10%", marginRight: "10%"}}/>
+            <Typography variant="h4" style={{marginTop: "5%", textAlign: "center", marginBottom: "2%"}}>ORGANIZATION</Typography>
+            <div style={{marginLeft: "20%", marginRight: "20%"}}>
+              <Carousel navButtonsAlwaysVisible>
+                  {items.map( (item, i) => <Item key={i} item={item} /> )}
+              </Carousel>
             </div>
         </div>
     )
